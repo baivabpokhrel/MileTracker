@@ -9,9 +9,9 @@ function main () {
     e.preventDefault();
     
 
-    const miles = document.getElementById('input-miles').value;
-    const day = document.getElementById('input-day').value;
-    const date = document.getElementById('input-date').value;
+    let miles = document.getElementById('input-miles').value;
+    let day = document.getElementById('input-day').value;
+    let date = document.getElementById('input-date').value;
       
       
     document.getElementById('input-miles').value = '';
@@ -33,7 +33,11 @@ function main () {
       const date_h4 = document.createElement("h4");
       const close_icon = document.createElement("BUTTON");
       close_icon.innerHTML="remove"
-      
+        
+      miles="You ran a total of "+ miles +" miles";
+      day="On "+ day;
+      date ="Dated " + date;
+        
       miles_h3.append(document.createTextNode(miles));
       day_h4.append(document.createTextNode(day));
       date_h4.append(document.createTextNode(date));
